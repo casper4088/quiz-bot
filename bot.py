@@ -19,8 +19,10 @@ from aiogram.fsm.context import FSMContext
 #  SOZLAMALAR
 # =========================
 import os
-
-BOT_TOKEN = os.getenv("BOT_TOKEN", "")
+from aiogram import Bot, Dispatcher
+TOKEN = os.getenv("BOT_TOKEN")
+bot = Bot(token=TOKEN)
+dp = Dispatcher()
 ADMIN_IDS = {int(x) for x in os.getenv("ADMIN_IDS", "837458333").split(",") if x.strip().isdigit()}
 
 if not BOT_TOKEN:
