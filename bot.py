@@ -20,10 +20,14 @@ from openpyxl.utils import get_column_letter
 import os
 from aiogram import Bot, Dispatcher
 
-TOKEN = os.getenv("BOT_TOKEN")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
-bot = Bot(token=TOKEN)
+if not BOT_TOKEN:
+    raise ValueError("BOT_TOKEN topilmadi!")
+
+bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
+Dispatcher()
 
 
 
