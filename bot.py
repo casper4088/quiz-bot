@@ -25,7 +25,7 @@ TOKEN = os.getenv("BOT_TOKEN")
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
-ADMIN_IDS = {114677843}                  # <-- Admin ID(lar). Masalan: {837458333, 5458639295}
+
 
 
 DB_NAME = "quiz.db"
